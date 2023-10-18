@@ -61,6 +61,8 @@
             this.nomeAluno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataNascimentoAluno = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Sexo.SuspendLayout();
             this.SuspendLayout();
@@ -143,10 +145,10 @@
             // dddAluno
             // 
             this.dddAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dddAluno.Location = new System.Drawing.Point(540, 246);
+            this.dddAluno.Location = new System.Drawing.Point(535, 246);
             this.dddAluno.Multiline = true;
             this.dddAluno.Name = "dddAluno";
-            this.dddAluno.Size = new System.Drawing.Size(50, 29);
+            this.dddAluno.Size = new System.Drawing.Size(58, 29);
             this.dddAluno.TabIndex = 108;
             // 
             // label16
@@ -172,7 +174,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(621, 221);
+            this.label15.Location = new System.Drawing.Point(608, 221);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 22);
             this.label15.TabIndex = 105;
@@ -308,7 +310,6 @@
             this.ufAluno.Name = "ufAluno";
             this.ufAluno.Size = new System.Drawing.Size(61, 32);
             this.ufAluno.TabIndex = 94;
-            this.ufAluno.Text = "UF:";
             // 
             // label8
             // 
@@ -416,12 +417,34 @@
             this.dataNascimentoAluno.TabIndex = 110;
             this.dataNascimentoAluno.Value = new System.DateTime(2023, 9, 30, 17, 39, 0, 0);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(332, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 22);
+            this.label1.TabIndex = 111;
+            this.label1.Text = "UF:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(480, 279);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 22);
+            this.label4.TabIndex = 112;
+            this.label4.Text = "Número:";
+            // 
             // Aluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(826, 546);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataNascimentoAluno);
             this.Controls.Add(this.Sexo);
             this.Controls.Add(this.dddAluno);
@@ -500,5 +523,7 @@
         private System.Windows.Forms.TextBox nomeAluno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dataNascimentoAluno;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

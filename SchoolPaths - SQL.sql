@@ -33,6 +33,46 @@ escola VARCHAR(30) NOT NULL,
 sexo VARCHAR(10) NOT NULL,
 )
 
+DROP TABLE motorista_db
+
+CREATE TABLE motorista_db
+(
+id_user INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+nomeMotorista VARCHAR(30) NOT NULL,
+sobrenomeMotorista VARCHAR(20) NOT NULL,
+nascimentoMotorista DATE NOT NULL,
+cpfMotorista CHAR(11) NOT NULL,
+rgMotorista VARCHAR(10) NOT NULL,
+dddMotorista CHAR(05) NOT NULL,
+telefoneMotorista CHAR(12) NOT NULL,
+endereçoMotorista VARCHAR(35) NOT NULL,
+numeroMotorista CHAR(09) NOT NULL,
+bairroMotorista VARCHAR(35) NOT NULL,
+cidadeMotorista VARCHAR(15) NOT NULL,
+cepMotorista CHAR(10) NOT NULL,
+ufMotorista VARCHAR(05) NOT NULL,
+cnhMotorista CHAR(09) NOT NULL,
+primeiracnhMotorista DATE NOT NULL,
+sexo VARCHAR(10) NOT NULL,
+)
+
+DROP TABLE veiculo_db
+
+CREATE TABLE veiculo_db
+(
+id_user INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+renavam CHAR(09) NOT NULL,
+chassi VARCHAR(17) NOT NULL,
+cor VARCHAR (20) NOT NULL,
+modelo VARCHAR (35) NOT NULL,
+marca VARCHAR (30) NOT NULL,
+placa VARCHAR (10) NOT NULL,
+anofabric DATE NOT NULL,
+potencia VARCHAR (10) NOT NULL,
+combustivel VARCHAR (10) NOT NULL,
+capacidade CHAR(10) NOT NULL,
+)
+
 SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables
 
 ALTER TABLE aluno_db
@@ -51,3 +91,11 @@ DELETE FROM aluno_db
 SELECT * FROM usuario_db
 
 DELETE FROM usuario_db
+
+SELECT * FROM motorista_db
+
+DELETE FROM motorista_db
+
+SELECT * FROM veiculo_db
+
+DELETE FROM veiculo_db

@@ -64,6 +64,7 @@
             this.Sexo = new System.Windows.Forms.GroupBox();
             this.masculinoMotorista = new System.Windows.Forms.RadioButton();
             this.femininoMotorista = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Sexo.SuspendLayout();
             this.SuspendLayout();
@@ -203,7 +204,6 @@
             this.ufMotorista.Name = "ufMotorista";
             this.ufMotorista.Size = new System.Drawing.Size(61, 32);
             this.ufMotorista.TabIndex = 58;
-            this.ufMotorista.Text = "UF:";
             // 
             // label8
             // 
@@ -449,12 +449,23 @@
             this.femininoMotorista.Text = "Feminino";
             this.femininoMotorista.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(332, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 22);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "UF:";
+            // 
             // motorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(842, 546);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Sexo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.primeiraCnhMotorista);
@@ -539,5 +550,6 @@
         private System.Windows.Forms.GroupBox Sexo;
         private System.Windows.Forms.RadioButton masculinoMotorista;
         private System.Windows.Forms.RadioButton femininoMotorista;
+        private System.Windows.Forms.Label label1;
     }
 }

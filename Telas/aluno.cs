@@ -41,24 +41,52 @@ namespace SchoolPaths
             Sexo.Text = "";
         }
 
+        private bool CamposEstaoPreenchidos()
+        {
+            if (string.IsNullOrWhiteSpace(nomeAluno.Text) ||
+                string.IsNullOrWhiteSpace(sobrenomeAluno.Text) ||
+                string.IsNullOrWhiteSpace(dataNascimentoAluno.Text) ||
+                string.IsNullOrWhiteSpace(cpfAluno.Text) ||
+                string.IsNullOrWhiteSpace(rgAluno.Text) ||
+                string.IsNullOrWhiteSpace(dddAluno.Text) ||
+                string.IsNullOrWhiteSpace(telefoneAluno.Text) ||
+                string.IsNullOrWhiteSpace(endereçoAluno.Text) ||
+                string.IsNullOrWhiteSpace(numeroAluno.Text) ||
+                string.IsNullOrWhiteSpace(bairroAluno.Text) ||
+                string.IsNullOrWhiteSpace(cidadeAluno.Text) ||
+                string.IsNullOrWhiteSpace(cepAluno.Text) ||
+                string.IsNullOrWhiteSpace(ufAluno.Text) ||
+                string.IsNullOrWhiteSpace(escolaAluno.Text) ||
+                string.IsNullOrWhiteSpace(Sexo.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
         private void Confirmar_Click(object sender, EventArgs e)
         {
-            string sex;
+            if (!CamposEstaoPreenchidos())
+            {
+                return; // Retorna se os campos não estiverem preenchidos.
+            }
+
+            string sex = "";
+
             if (masculinoAluno.Checked)
             {
                 sex = "Masculino";
             }
-
             else if (femininoAluno.Checked)
-
             {
                 sex = "Feminino";
             }
-
             else
             {
-                sex = "";
-                MessageBox.Show("Por Favor, Selecione uma Opção de Sexo!", "Messagem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor, selecione uma opção de sexo!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return; // Retorna se o sexo não foi selecionado.
             }
 
             try
@@ -68,9 +96,10 @@ namespace SchoolPaths
                 cmd.Connection = con;
                 cmd.CommandText = strSQL;
                 dt = cmd.ExecuteReader();
+
                 if (dt.HasRows)
                 {
-                    MessageBox.Show("CPF já Cadastrado!", "OPS!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("CPF já cadastrado!", "OPS!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (!dt.HasRows)
                 {
@@ -98,7 +127,7 @@ namespace SchoolPaths
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Dados Cadastrados com Sucesso!", "Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dados cadastrados com sucesso!", "Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     LimparCampos();
                     cmd.Parameters.Clear();
@@ -111,12 +140,12 @@ namespace SchoolPaths
                 con.Close();
             }
         }
+
         private void Cancelar_Click(object sender, EventArgs e)
         {
             alunoMotorista FrmMain = new alunoMotorista();
             FrmMain.Show();
             this.Hide();
         }
-
     }
 }

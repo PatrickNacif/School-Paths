@@ -48,6 +48,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.2.1.15\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,72 +67,103 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Telas\alunoMotorista.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\alunoCrud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\alunoMotorista.Designer.cs">
-      <DependentUpon>alunoMotorista.cs</DependentUpon>
+    <Compile Include="Aluno\alunoCrud.Designer.cs">
+      <DependentUpon>alunoCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\aluno.cs">
+    <Compile Include="Aluno\alunoHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\aluno.Designer.cs">
-      <DependentUpon>aluno.cs</DependentUpon>
+    <Compile Include="Aluno\alunoHome.Designer.cs">
+      <DependentUpon>alunoHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\login.cs">
+    <Compile Include="Aluno\alunoView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\login.Designer.cs">
+    <Compile Include="Aluno\alunoView.Designer.cs">
+      <DependentUpon>alunoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlComponent\ImplementedException.cs" />
+    <Compile Include="Login\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\motorista.cs">
+    <Compile Include="Motorista\motoristaHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\motorista.Designer.cs">
-      <DependentUpon>motorista.cs</DependentUpon>
+    <Compile Include="Motorista\motoristaHome.Designer.cs">
+      <DependentUpon>motoristaHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Motorista\motoristaCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motorista\motoristaCrud.Designer.cs">
+      <DependentUpon>motoristaCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\usuarioSenha.cs">
+    <Compile Include="Motorista\motoristaView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\usuarioSenha.Designer.cs">
-      <DependentUpon>usuarioSenha.cs</DependentUpon>
+    <Compile Include="Motorista\motoristaView.Designer.cs">
+      <DependentUpon>motoristaView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\veiculo.cs">
+    <Compile Include="SqlComponent\SqlComand.cs" />
+    <Compile Include="SqlComponent\SqlDateReader.cs" />
+    <Compile Include="Login\usuarioCrud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\veiculo.Designer.cs">
-      <DependentUpon>veiculo.cs</DependentUpon>
+    <Compile Include="Login\usuarioCrud.Designer.cs">
+      <DependentUpon>usuarioCrud.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Telas\alunoMotorista.resx">
-      <DependentUpon>alunoMotorista.cs</DependentUpon>
+    <Compile Include="Veiculo\veiculoCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Veiculo\veiculoCrud.Designer.cs">
+      <DependentUpon>veiculoCrud.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aluno\alunoCrud.resx">
+      <DependentUpon>alunoCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\aluno.resx">
-      <DependentUpon>aluno.cs</DependentUpon>
+    <EmbeddedResource Include="Aluno\alunoHome.resx">
+      <DependentUpon>alunoHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\login.resx">
+    <EmbeddedResource Include="Aluno\alunoView.resx">
+      <DependentUpon>alunoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motorista\motoristaHome.resx">
+      <DependentUpon>motoristaHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\motorista.resx">
-      <DependentUpon>motorista.cs</DependentUpon>
+    <EmbeddedResource Include="Motorista\motoristaCrud.resx">
+      <DependentUpon>motoristaCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="Telas\usuarioSenha.resx">
-      <DependentUpon>usuarioSenha.cs</DependentUpon>
+    <EmbeddedResource Include="Motorista\motoristaView.resx">
+      <DependentUpon>motoristaView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\veiculo.resx">
-      <DependentUpon>veiculo.cs</DependentUpon>
+    <EmbeddedResource Include="Login\usuarioCrud.resx">
+      <DependentUpon>usuarioCrud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Veiculo\veiculoCrud.resx">
+      <DependentUpon>veiculoCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,7 +175,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Telas\App.config" />
+    <None Include="Login\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login.jpg" />
@@ -178,6 +215,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fundo Azul2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visualizacao-3d-do-mapa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2023-10-26 115552.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2023-10-26 120629.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School Bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2856.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wavy_Edu-06_Single-06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_2023-10-31_202542349-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bus School.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bus School1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -99,3 +99,24 @@ DELETE FROM motorista_db
 SELECT * FROM veiculo_db
 
 DELETE FROM veiculo_db
+
+CREATE UNIQUE INDEX Usuario_index
+ON usuario_db (usuario);
+
+insert into usuario_db values('k','o');
+
+ALTER TABLE usuario_db
+ADD IdAluno Int;
+
+ALTER TABLE usuario_db
+ADD IdMotorista Int;
+
+ALTER TABLE usuario_db
+ADD FOREIGN KEY (IdMotorista) REFERENCES motorista_db(id_user);
+
+ALTER TABLE usuario_db
+ADD FOREIGN KEY (IdAluno) REFERENCES aluno_db(id_user);
+
+select * FROM aluno_db
+
+DELETE FROM aluno_db
